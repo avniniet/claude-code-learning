@@ -52,6 +52,7 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done · `[!]` blocked
 - [x] T8.1 lint / test / build pass
 - [x] T8.2 Container serves site, data, deep links, `/healthz`
 - [!] T8.3 Public URL via ngrok — blocked: owner must add `NGROK_AUTHTOKEN` to `.env`, then `docker compose up -d`
+- [x] T8.4 GitHub Actions CI: lint + test + build on every PR, plus Docker image build (`.github/workflows/ci.yml`, ADR 0007)
 
 ## Backlog / future
 - [ ] Add LinkedIn-only details (certifications, recommendations) to data files
@@ -61,3 +62,4 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done · `[!]` blocked
 
 ## Change log
 - 2026-10-26: Phases 1–7 done. lint / 16 tests / build pass; container healthy and serving `/`, `/data/*`, deep links, `/healthz`. Upgraded vitest to v3 for vite 6 type compatibility.
+- 2026-10-29: Added GitHub Actions CI (issue #1).
