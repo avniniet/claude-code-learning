@@ -1,0 +1,94 @@
+[
+  {
+    "id": "cognizant-verizon",
+    "role": "Technical Lead & Microservices Architect",
+    "employer": "Cognizant",
+    "client": "Verizon",
+    "domain": "Telecommunications & Supply Chain",
+    "start": "2024-06",
+    "end": null,
+    "highlights": [
+      "Direct and mentor 4 cross-functional Agile squads (12 engineers) building the greenfield Milk Supply logistics platform from concept to launch.",
+      "Architected the high-throughput \"Loading\" microservice with Java 17, Spring Boot and reactive asynchronous event models, cutting processing latency by 32%.",
+      "Lead backlog grooming, sprint planning and architecture reviews; own HLD system topology and LLD UML, class structures and schemas.",
+      "Built distributed event streaming on Apache Kafka to sync real-time updates across MongoDB and MySQL on AWS.",
+      "Manage roadmap risk, velocity reports and release milestones in JIRA with zero slippage on mission-critical deliverables."
+    ],
+    "stack": ["Java 17", "Spring Boot", "AWS", "Apache Kafka", "MongoDB", "MySQL", "React 18", "Docker", "JIRA"]
+  },
+  {
+    "id": "accenture-walmart",
+    "role": "Java Technical Lead & Core Contributor",
+    "employer": "Accenture",
+    "client": "Walmart",
+    "domain": "Retail Omnichannel & Inventory",
+    "start": "2021-03",
+    "end": "2024-05",
+    "highlights": [
+      "Led an agile team of 7 engineers (5 backend, 2 frontend), introducing peer code reviews, SonarQube quality gates and automated JUnit/Mockito suites.",
+      "Lead IC architecting low-latency Spring WebFlux / Spring Boot microservices that handled peak holiday traffic.",
+      "Drove HLD and LLD governance and technical consensus across distributed teams, turning complex retail workflows into software specifications."
+    ],
+    "stack": ["Java", "Spring WebFlux", "Spring Boot", "JUnit", "Mockito", "SonarQube", "Microservices"]
+  },
+  {
+    "id": "tcs-cvs",
+    "role": "Associate Technical Lead & Senior Java Developer",
+    "employer": "Tata Consultancy Services",
+    "client": "CVS – Omnicare",
+    "domain": "Healthcare & Pharmaceutical",
+    "start": "2018-10",
+    "end": "2021-03",
+    "highlights": [
+      "Backup Technical Lead in a 5-member team migrating legacy healthcare monoliths to Spring Boot / Spring Cloud microservices.",
+      "Enforced role-based authorization, token encryption and OAuth2 with Spring Security for HIPAA-compliant processing.",
+      "Ran microservices on Pivotal Cloud Foundry with service discovery, circuit breaking and centralized config.",
+      "Performed RCA on Sev-1/Sev-2 incidents and shipped concurrency patches and MySQL connection-pool tuning."
+    ],
+    "stack": ["Java", "Spring Boot", "Spring Cloud", "Spring Security", "MySQL", "PCF", "Angular 5", "REST"]
+  },
+  {
+    "id": "tcs-sears",
+    "role": "Senior Java Software Engineer (Product Support)",
+    "employer": "Tata Consultancy Services",
+    "client": "Sears",
+    "domain": "Retail E-commerce Support",
+    "start": "2016-10",
+    "end": "2018-09",
+    "highlights": [
+      "L3 production support and sustaining engineering for enterprise e-commerce platforms, resolving complex multithreaded runtime issues.",
+      "Built backend modules on Spring MVC and optimized batch operations with Oracle PL/SQL procedures and triggers.",
+      "Automated monitoring, batch reconciliation and housekeeping with shell scripts, cutting manual intervention by 40%."
+    ],
+    "stack": ["Core Java", "Spring MVC", "JSP", "Oracle DB", "PL/SQL", "Unix Shell", "JIRA"]
+  },
+  {
+    "id": "tcs-johnlewis",
+    "role": "Java/ADF Software Engineer",
+    "employer": "Tata Consultancy Services",
+    "client": "John Lewis Plc",
+    "domain": "UK Retail Productivity",
+    "start": "2014-04",
+    "end": "2016-08",
+    "highlights": [
+      "Core IC engineer building an internal productivity suite from scratch, improving operational task turnaround by 25%.",
+      "Implemented business components in Oracle ADF and JSF, standardizing data exchange and transaction rollback.",
+      "Wrote complex SQL, analytical joins and transactional stored procedures in Oracle."
+    ],
+    "stack": ["Java", "Oracle ADF", "JSF", "Oracle 11g", "PL/SQL", "WebLogic"]
+  },
+  {
+    "id": "tcs-oracle-retail",
+    "role": "Software Engineer",
+    "employer": "Tata Consultancy Services",
+    "client": "Oracle Retail COE",
+    "domain": "Retail Mobility",
+    "start": "2013-06",
+    "end": "2014-04",
+    "highlights": [
+      "Built Android enterprise apps from scratch to automate store-floor audits and live inventory tracking.",
+      "Used background threading and SQLite caching for reliable offline synchronization."
+    ],
+    "stack": ["Android SDK", "Java", "SQLite", "XML"]
+  }
+]

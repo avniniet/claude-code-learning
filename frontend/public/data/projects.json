@@ -1,0 +1,98 @@
+[
+  {
+    "id": "verizon-milk-supply",
+    "name": "Milk Supply Logistics Platform",
+    "summary": "Greenfield enterprise logistics platform, from concept to launch. Architected the high-throughput \"Loading\" microservice and the Kafka event backbone that keeps MongoDB and MySQL stores in sync in real time.",
+    "client": "Verizon",
+    "employer": "Cognizant",
+    "domain": "Telecom & Supply Chain",
+    "projectType": "Greenfield Build",
+    "role": "Technical Lead & Architect",
+    "teamSize": "4 squads · 12 engineers",
+    "experienceId": "cognizant-verizon",
+    "impact": [
+      { "metric": "−32%", "description": "processing latency" },
+      { "metric": "0", "description": "slippage on critical releases" }
+    ],
+    "stack": ["Java 17", "Spring Boot", "Kafka", "MongoDB", "MySQL", "AWS", "React 18", "Docker"]
+  },
+  {
+    "id": "walmart-omnichannel",
+    "name": "Omnichannel Inventory Microservices",
+    "summary": "Non-blocking, low-latency reactive microservices for Walmart's omnichannel and inventory systems, built to absorb peak holiday traffic.",
+    "client": "Walmart",
+    "employer": "Accenture",
+    "domain": "Retail",
+    "projectType": "Reactive Microservices",
+    "role": "Java Technical Lead",
+    "teamSize": "7 engineers",
+    "experienceId": "accenture-walmart",
+    "impact": [
+      { "metric": "Peak", "description": "holiday traffic handled seamlessly" },
+      { "metric": "Gated", "description": "SonarQube quality + automated tests" }
+    ],
+    "stack": ["Spring WebFlux", "Spring Boot", "Java", "JUnit", "Mockito", "SonarQube"]
+  },
+  {
+    "id": "cvs-modernization",
+    "name": "Healthcare Monolith → Microservices",
+    "summary": "Large-scale migration of legacy healthcare monoliths to a resilient Spring Cloud microservices architecture on PCF, with HIPAA-compliant OAuth2 security.",
+    "client": "CVS – Omnicare",
+    "employer": "TCS",
+    "domain": "Healthcare",
+    "projectType": "Modernization & Migration",
+    "role": "Associate Technical Lead",
+    "teamSize": "5 engineers",
+    "experienceId": "tcs-cvs",
+    "impact": [
+      { "metric": "HIPAA", "description": "compliant security profiles" },
+      { "metric": "Sev-1", "description": "incidents resolved via RCA" }
+    ],
+    "stack": ["Spring Boot", "Spring Cloud", "Spring Security", "OAuth2", "PCF", "MySQL", "Angular 5"]
+  },
+  {
+    "id": "sears-sustaining",
+    "name": "E-commerce Sustaining Engineering",
+    "summary": "L3 production support and backend enhancement for enterprise e-commerce platforms, including PL/SQL batch tuning and shell-script automation.",
+    "client": "Sears",
+    "employer": "TCS",
+    "domain": "Retail",
+    "projectType": "Production Support",
+    "role": "Senior Java Engineer",
+    "experienceId": "tcs-sears",
+    "impact": [
+      { "metric": "−40%", "description": "manual intervention hours" }
+    ],
+    "stack": ["Core Java", "Spring MVC", "Oracle PL/SQL", "Unix Shell"]
+  },
+  {
+    "id": "johnlewis-productivity",
+    "name": "Internal Productivity Suite",
+    "summary": "Enterprise internal productivity suite built from scratch on Oracle ADF/JSF, with standardized data exchange and transaction rollback.",
+    "client": "John Lewis Plc",
+    "employer": "TCS",
+    "domain": "Retail",
+    "projectType": "Internal Tooling",
+    "role": "Core Software Engineer",
+    "experienceId": "tcs-johnlewis",
+    "impact": [
+      { "metric": "+25%", "description": "operational task turnaround" }
+    ],
+    "stack": ["Java", "Oracle ADF", "JSF", "Oracle 11g", "WebLogic"]
+  },
+  {
+    "id": "oracle-retail-audit",
+    "name": "Store Audit & Inventory Mobile App",
+    "summary": "Android enterprise app built from scratch to automate store-floor audits and live inventory tracking, with offline sync.",
+    "client": "Oracle Retail COE",
+    "employer": "TCS",
+    "domain": "Retail",
+    "projectType": "Mobile App",
+    "role": "Software Engineer",
+    "experienceId": "tcs-oracle-retail",
+    "impact": [
+      { "metric": "Offline", "description": "first sync with SQLite caching" }
+    ],
+    "stack": ["Android SDK", "Java", "SQLite"]
+  }
+]

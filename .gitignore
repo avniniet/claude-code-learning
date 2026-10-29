@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+coverage/
+
+# Claude Code auto-review output
+.claude/reviews/
+*.tsbuildinfo

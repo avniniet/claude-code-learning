@@ -1,0 +1,19 @@
+{
+  "name": "Avnish Kumar Mishra",
+  "title": "Lead Java Engineer & Technical Architect",
+  "currentRole": "Engineering Manager + Architect at Cognizant",
+  "location": "India",
+  "yearsOfExperience": "13+",
+  "tagline": "I design and lead delivery of high-throughput, cloud-native microservice platforms for global enterprises.",
+  "summary": "Java Technical Lead and Architect with over 13 years and 10 months of software engineering experience across enterprise product development, distributed system design and large-scale microservice architectures. I lead cross-functional engineering teams and stay hands-on in Core Java (8–17), Spring Boot, Spring WebFlux, multithreading and cloud-native platforms (AWS, Azure). My focus areas are high-throughput messaging (Kafka), polyglot persistence (MongoDB, Cassandra, MySQL, Oracle) and low-latency API design, along with proactive stakeholder communication, risk mitigation and Agile governance on mission-critical deliveries.",
+  "stats": [
+    { "value": "13+", "label": "Years of experience" },
+    { "value": "6", "label": "Enterprise clients" },
+    { "value": "12", "label": "Engineers led across 4 squads" },
+    { "value": "3", "label": "Industry domains" }
+  ],
+  "email": "avniniet@gmail.com",
+  "links": [
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/avnish-mishra-26567632/" }
+  ]
+}

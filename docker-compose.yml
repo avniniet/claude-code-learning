@@ -1,0 +1,40 @@
+name: portfolio
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      args:
+        VITE_DATA_SOURCE: ${VITE_DATA_SOURCE:-static}
+        VITE_API_BASE_URL: ${VITE_API_BASE_URL:-}
+    image: avnish-portfolio-web:latest
+    ports:
+      - "${WEB_PORT:-8080}:80"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1/healthz"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+  ngrok:
+    image: ngrok/ngrok:3
+    # NGROK_DOMAIN optional: set it to use a reserved static domain.
+    command: >
+      http web:80 --log stdout ${NGROK_DOMAIN:+--url=${NGROK_DOMAIN}}
+    environment:
+      NGROK_AUTHTOKEN: ${NGROK_AUTHTOKEN:-}
+    ports:
+      - "4040:4040"
+    depends_on:
+      web:
+        condition: service_healthy
+    restart: unless-stopped
+
+  # Future backend (see decisions/0002). Uncomment, then enable /api/ in docker/nginx.conf
+  # and build web with VITE_DATA_SOURCE=api.
+  # backend:
+  #   build: ./backend
+  #   expose:
+  #     - "8080"

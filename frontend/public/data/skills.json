@@ -1,0 +1,54 @@
+{
+  "technical": [
+    {
+      "category": "Languages & Core",
+      "items": ["Core Java (8/11/17)", "Multithreading", "Concurrency", "Algorithms", "Data Structures", "OOP/OOD", "Design Patterns"]
+    },
+    {
+      "category": "Frameworks & Tools",
+      "items": ["Spring Boot", "Spring WebFlux", "Spring Cloud", "Spring Security", "Spring MVC", "Hibernate/JPA", "RESTful APIs", "JUnit", "Mockito"]
+    },
+    {
+      "category": "Architecture & Messaging",
+      "items": ["Microservices", "Event-Driven Architecture", "Reactive Systems", "HLD & LLD", "Apache Kafka"]
+    },
+    {
+      "category": "Databases & Storage",
+      "items": ["MongoDB", "Apache Cassandra", "MySQL", "Oracle 11g/12c", "PL/SQL", "Redis Caching", "Query Optimization"]
+    },
+    {
+      "category": "Cloud & DevOps",
+      "items": ["AWS (EC2, S3, RDS)", "Microsoft Azure", "Pivotal Cloud Foundry", "Docker", "Kubernetes", "CI/CD Pipelines", "Git", "Maven", "Gradle", "SonarQube"]
+    },
+    {
+      "category": "Frontend & Mobile",
+      "items": ["React (17/18)", "Angular 5", "Oracle ADF / JSF", "Android SDK"]
+    },
+    {
+      "category": "Principles & Practices",
+      "items": ["SOLID", "Domain-Driven Design", "12-Factor App", "High-Availability Systems", "TDD", "Automated Integration Testing"]
+    }
+  ],
+  "functional": [
+    {
+      "category": "Leadership",
+      "items": ["Team leadership & mentoring", "Leading multiple Agile squads (12 engineers)", "Cross-functional coordination"]
+    },
+    {
+      "category": "Delivery & Governance",
+      "items": ["Agile / Scrum", "Backlog grooming & sprint planning", "JIRA governance & velocity reporting", "Release milestone management", "Roadmap risk management"]
+    },
+    {
+      "category": "Architecture Practice",
+      "items": ["Requirement engineering", "Architecture reviews", "HLD system topology", "LLD / UML & schema design", "Technical consensus across distributed teams"]
+    },
+    {
+      "category": "Quality & Operations",
+      "items": ["Code review standards", "Quality gates", "L3 production support", "Root-cause analysis (Sev-1/Sev-2)", "Incident remediation", "Process automation"]
+    },
+    {
+      "category": "Stakeholder Management",
+      "items": ["Proactive stakeholder communication", "Client-facing delivery", "Compliance-aware delivery (HIPAA)"]
+    }
+  ]
+}
