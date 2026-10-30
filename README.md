@@ -4,6 +4,7 @@ Static React + Vite + TypeScript portfolio, served by nginx in Docker and expose
 
 - Work tracker: [`tasks.md`](tasks.md)
 - Decision log (read first when resuming): [`decisions/`](decisions/README.md)
+- How to contribute: [`CONTRIBUTING.md`](CONTRIBUTING.md)
 
 ## Run with Docker (production)
 
