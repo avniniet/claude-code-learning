@@ -39,7 +39,7 @@ All content lives in `frontend/public/data/`:
 | `experience.json` | roles / employers / clients timeline |
 | `projects.json` | projects with type, domain, client, impact |
 
-The shapes are defined in `frontend/src/types/portfolio.ts`. Data is baked into the image, so run `docker compose up --build -d` after editing. nginx serves `/data/` with `no-cache`, so visitors get the new content straight away.
+The shapes are defined in `frontend/src/types/portfolio.ts`; see [`docs/content-schema.md`](docs/content-schema.md) for a field-by-field reference. Data is baked into the image, so run `docker compose up --build -d` after editing. nginx serves `/data/` with `no-cache`, so visitors get the new content straight away.
 
 ## Adding a backend later
 
