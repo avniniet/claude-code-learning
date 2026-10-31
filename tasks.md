@@ -21,6 +21,7 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done · `[!]` blocked
 - [x] T3.3 `public/data/skills.json` (technical + functional)
 - [x] T3.4 `public/data/experience.json` (6 roles)
 - [x] T3.5 `public/data/projects.json` (6 projects, type/domain/client)
+- [x] T3.6 `docs/content-schema.md`: field-by-field reference for the JSON content files (issue #1)
 
 ## Phase 4 — Service layer (backend-ready)
 - [x] T4.1 `httpClient.ts` (base URL, timeout, typed errors)
