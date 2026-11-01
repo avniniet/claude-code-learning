@@ -4,6 +4,7 @@ Static React + Vite + TypeScript portfolio, served by nginx in Docker and expose
 
 - Work tracker: [`tasks.md`](tasks.md)
 - Decision log (read first when resuming): [`decisions/`](decisions/README.md)
+- Architecture and data flow: [`docs/architecture.md`](docs/architecture.md)
 
 ## Run with Docker (production)
 
@@ -54,6 +55,7 @@ See [decisions/0002](decisions/0002-data-layer-backend-ready.md). In short:
 ```
 decisions/           ADRs
 docker/              Dockerfile, nginx.conf
+docs/                architecture and reference docs
 frontend/
   public/data/       content (runtime JSON)
   src/types/         domain contract

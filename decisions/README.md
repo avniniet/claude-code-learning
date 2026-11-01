@@ -9,7 +9,7 @@ Architecture Decision Record. Read this index first when resuming work: it is th
 |---|-------|--------|------|
 | [0001](0001-frontend-stack.md) | Frontend stack: React 18 + Vite + TypeScript | Accepted | 2026-10-26 |
 | [0002](0002-data-layer-backend-ready.md) | Backend-ready data layer (service interface + runtime JSON) | Accepted | 2026-10-26 |
-| [0003](0003-content-source-and-privacy.md) | Content source = resume; LinkedIn-only contact | Accepted | 2026-10-26 |
+| [0003](0003-content-source-and-privacy.md) | Content source = resume; contact = LinkedIn + email (amended 2026-10-27) | Accepted | 2026-10-26 |
 | [0004](0004-docker-nginx-serving.md) | Multi-stage Docker image served by nginx | Accepted | 2026-10-26 |
 | [0005](0005-ngrok-compose-service.md) | ngrok as a Docker Compose service | Accepted | 2026-10-26 |
 | [0006](0006-styling-approach.md) | Plain CSS with design tokens, light/dark theme | Accepted | 2026-10-26 |
