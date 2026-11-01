@@ -54,6 +54,9 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done · `[!]` blocked
 - [!] T8.3 Public URL via ngrok — blocked: owner must add `NGROK_AUTHTOKEN` to `.env`, then `docker compose up -d`
 - [x] T8.4 GitHub Actions CI: lint + test + build on every PR, plus Docker image build (`.github/workflows/ci.yml`, ADR 0007)
 
+## Phase 9 — Documentation
+- [x] T9.1 `docs/architecture.md`: data flow, `static` vs. `api` switch, serving (issue #1)
+
 ## Backlog / future
 - [ ] Add LinkedIn-only details (certifications, recommendations) to data files
 - [ ] Implement backend and switch `VITE_DATA_SOURCE=api`
