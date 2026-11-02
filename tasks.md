@@ -47,6 +47,7 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done · `[!]` blocked
 - [x] T7.2 `docker/nginx.conf` (SPA fallback, caching, headers, `/healthz`, `/api` placeholder)
 - [x] T7.3 `docker-compose.yml` (web + ngrok)
 - [x] T7.4 Root `.env.example`, `.gitignore`, `.dockerignore`, `README.md`
+- [x] T7.5 README: tech stack badges and a Prerequisites section (issue #1)
 
 ## Phase 8 — Verification
 - [x] T8.1 lint / test / build pass
