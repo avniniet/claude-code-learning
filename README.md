@@ -1,9 +1,27 @@
 # Avnish Kumar Mishra — Portfolio
 
+[![CI](https://github.com/avniniet/claude-code-learning/actions/workflows/ci.yml/badge.svg)](https://github.com/avniniet/claude-code-learning/actions/workflows/ci.yml)
+![React 18](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)
+![Vite 6](https://img.shields.io/badge/Vite-6-646CFF?logo=vite&logoColor=white)
+![TypeScript 5.6](https://img.shields.io/badge/TypeScript-5.6-3178C6?logo=typescript&logoColor=white)
+![Vitest 3](https://img.shields.io/badge/Vitest-3-6E9F18?logo=vitest&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-Compose_v2-2496ED?logo=docker&logoColor=white)
+![nginx 1.27](https://img.shields.io/badge/nginx-1.27-009639?logo=nginx&logoColor=white)
+
 Static React + Vite + TypeScript portfolio, served by nginx in Docker and exposed publicly through ngrok.
 
 - Work tracker: [`tasks.md`](tasks.md)
 - Decision log (read first when resuming): [`decisions/`](decisions/README.md)
+
+## Prerequisites
+
+| Tool | Version | Needed for |
+|------|---------|------------|
+| [Node.js](https://nodejs.org/) + npm | 20 (same as CI and the Docker build stage) | Local development, tests, build |
+| [Docker Engine](https://docs.docker.com/engine/) with [Compose v2](https://docs.docker.com/compose/) | Compose v2 (`docker compose`, not the legacy `docker-compose`) | Running the production image |
+| [ngrok](https://ngrok.com/) account | Free tier is enough | Optional: public URL (`NGROK_AUTHTOKEN` in `.env`) |
+
+You only need Node.js to develop and test, and only Docker to run the production build: the image builds the frontend itself.
 
 ## Run with Docker (production)
 
