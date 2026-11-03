@@ -29,6 +29,7 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done · `[!]` blocked
 - [x] T4.4 `ApiPortfolioService` (`/api/v1/*`, ready for backend)
 - [x] T4.5 Service factory driven by env config
 - [x] T4.6 Hooks `useAsync`, `usePortfolio`
+- [x] T4.7 TSDoc on the public service interfaces, `httpClient` and hooks (issue #1)
 
 ## Phase 5 — UI
 - [x] T5.1 Design tokens, light/dark theme, theme toggle
