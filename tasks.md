@@ -56,7 +56,7 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done · `[!]` blocked
 
 ## Backlog / future
 - [ ] Add LinkedIn-only details (certifications, recommendations) to data files
-- [ ] Implement backend and switch `VITE_DATA_SOURCE=api`
+- [ ] Implement backend and switch `VITE_DATA_SOURCE=api` (contract: [`docs/backend-api.md`](docs/backend-api.md), [`docs/openapi.yaml`](docs/openapi.yaml))
 - [ ] Optional: downloadable resume PDF, contact form (needs backend)
 - [ ] Mobile navigation menu (nav links are hidden below 860px; currently only the theme toggle shows)
 
