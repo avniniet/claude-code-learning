@@ -43,7 +43,7 @@ The shapes are defined in `frontend/src/types/portfolio.ts`. Data is baked into 
 
 ## Adding a backend later
 
-See [decisions/0002](decisions/0002-data-layer-backend-ready.md). In short:
+See [decisions/0002](decisions/0002-data-layer-backend-ready.md) and the API contract in [`docs/backend-api.md`](docs/backend-api.md) ([OpenAPI spec](docs/openapi.yaml)). In short:
 
 1. Implement `GET /api/v1/{profile,skills,experience,projects}` returning the types in `src/types/portfolio.ts`.
 2. Uncomment the `backend` service in `docker-compose.yml` and the `/api/` block in `docker/nginx.conf`.
