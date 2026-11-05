@@ -17,6 +17,8 @@ docker compose up --build -d  # web on http://localhost:8080 + ngrok tunnel
 - Health check: `curl localhost:8080/healthz`
 - Stop: `docker compose down`
 
+Full details (configuration, nginx caching and headers, ngrok, free static hosting): [`docs/deployment.md`](docs/deployment.md).
+
 ## Develop locally
 
 ```bash
