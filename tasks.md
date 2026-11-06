@@ -9,6 +9,7 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done · `[!]` blocked
 - [x] T1.1 Create `tasks.md`
 - [x] T1.2 Create `decisions/` with README (index + ADR template)
 - [x] T1.3 Record ADRs 0001–0006 (stack, data layer, content/privacy, nginx, ngrok, styling)
+- [x] T1.4 README "Learning with Claude Code" section: workflow + `.claude/` (agent, hook, settings) explained (issue #1)
 
 ## Phase 2 — Frontend scaffold
 - [x] T2.1 Vite + React 18 + TypeScript project in `frontend/`
