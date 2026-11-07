@@ -35,7 +35,18 @@ ul { margin: 0; padding: 0; }
 .nav__links { display: none; list-style: none; gap: var(--space-5); }
 .nav__links a { color: var(--color-text-muted); text-decoration: none; font-size: 0.95rem; font-weight: 500; }
 .nav__links a:hover { color: var(--color-text); }
-@media (min-width: 860px) { .nav__links { display: flex; } }
+.nav__actions { display: flex; align-items: center; gap: var(--space-2); }
+/* Mobile menu: below 860px the inline links are hidden, so a toggle opens them in a panel under the bar. */
+.nav__menu { position: absolute; top: 100%; left: 0; right: 0; background: var(--color-surface); border-bottom: 1px solid var(--color-border); box-shadow: var(--shadow-card); }
+.nav__menu[hidden] { display: none; }
+.nav__menu-links { list-style: none; display: flex; flex-direction: column; padding-top: var(--space-2); padding-bottom: var(--space-2); }
+.nav__menu-links a { display: block; padding: var(--space-3) 0; color: var(--color-text); text-decoration: none; font-weight: 500; }
+.nav__menu-links li + li { border-top: 1px solid var(--color-border); }
+.nav__menu-links a:hover { color: var(--color-accent); }
+@media (min-width: 860px) {
+  .nav__links { display: flex; }
+  .nav__actions .nav__menu-btn, .nav__menu { display: none; }
+}
 
 .icon-btn { display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: var(--radius-sm); border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text); cursor: pointer; }
 .icon-btn:hover { border-color: var(--color-accent); }

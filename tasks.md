@@ -35,6 +35,7 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done · `[!]` blocked
 - [x] T5.2 Shared components (Navbar, SectionHeader, Tag, Loader, ErrorState)
 - [x] T5.3 Sections: Hero, About, Skills, Experience, Projects (filters), Clients, Contact
 - [x] T5.4 Responsive + accessibility pass
+- [x] T5.5 Mobile navigation menu: toggle button below 860px opens the section links in a panel (closes on link, Escape or toggle)
 
 ## Phase 6 — Tests
 - [x] T6.1 Service factory test
@@ -58,7 +59,6 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done · `[!]` blocked
 - [ ] Add LinkedIn-only details (certifications, recommendations) to data files
 - [ ] Implement backend and switch `VITE_DATA_SOURCE=api`
 - [ ] Optional: downloadable resume PDF, contact form (needs backend)
-- [ ] Mobile navigation menu (nav links are hidden below 860px; currently only the theme toggle shows)
 
 ## Change log
 - 2026-10-26: Phases 1–7 done. lint / 16 tests / build pass; container healthy and serving `/`, `/data/*`, deep links, `/healthz`. Upgraded vitest to v3 for vite 6 type compatibility.
