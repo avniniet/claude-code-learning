@@ -1,6 +1,6 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import App from '../App';
-import { mockFetch } from './fixtures';
+import { fixtures, mockFetch } from './fixtures';
 
 beforeAll(() => {
   window.matchMedia ??= ((query: string) => ({ matches: false, media: query, addEventListener() {}, removeEventListener() {} })) as unknown as typeof window.matchMedia;
@@ -26,6 +26,21 @@ describe('App', () => {
     fireEvent.click(Array.from(domainGroup.querySelectorAll('button')).find((b) => b.textContent === 'Healthcare')!);
     expect(screen.queryByText('Milk Supply Logistics Platform')).not.toBeInTheDocument();
     expect(screen.getByText('Healthcare Monolith → Microservices')).toBeInTheDocument();
+  });
+
+  it('shows code and demo links only for projects that have them', async () => {
+    const [first, ...rest] = fixtures['/data/projects.json'];
+    const withLinks = { ...first, repoUrl: 'https://github.com/example/repo', demoUrl: 'https://demo.example.com' };
+    vi.stubGlobal('fetch', mockFetch({ ...fixtures, '/data/projects.json': [withLinks, ...rest] }));
+    render(<App />);
+    const code = await screen.findByRole('link', { name: `Code for ${first.name} (opens in a new tab)` });
+    expect(code).toHaveAttribute('href', 'https://github.com/example/repo');
+    expect(code).toHaveAttribute('rel', 'noopener noreferrer');
+    expect(screen.getByRole('link', { name: `Live demo for ${first.name} (opens in a new tab)` })).toHaveAttribute(
+      'href',
+      'https://demo.example.com',
+    );
+    expect(screen.getAllByRole('link', { name: /^Code for / })).toHaveLength(1);
   });
 
   it('shows an error state with retry when data fails', async () => {

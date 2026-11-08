@@ -21,6 +21,7 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done · `[!]` blocked
 - [x] T3.3 `public/data/skills.json` (technical + functional)
 - [x] T3.4 `public/data/experience.json` (6 roles)
 - [x] T3.5 `public/data/projects.json` (6 projects, type/domain/client)
+- [x] T3.7 Optional `repoUrl` / `demoUrl` on `Project`; cards show "Code" / "Live demo" links when set (http/https only), ready for public showcase projects (issue #1)
 
 ## Phase 4 — Service layer (backend-ready)
 - [x] T4.1 `httpClient.ts` (base URL, timeout, typed errors)

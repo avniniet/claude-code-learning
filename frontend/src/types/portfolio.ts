@@ -71,6 +71,10 @@ export interface Project {
   experienceId: string;
   impact: Impact[];
   stack: string[];
+  /** Optional public source-code link (http/https); the UI shows a "Code" link when present. */
+  repoUrl?: string;
+  /** Optional live demo link (http/https); the UI shows a "Live demo" link when present. */
+  demoUrl?: string;
 }
 
 export interface PortfolioData {

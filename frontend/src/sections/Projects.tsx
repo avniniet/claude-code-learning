@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 import { SectionHeader } from '../components/SectionHeader';
 import { TagList } from '../components/TagList';
 import type { Project } from '../types/portfolio';
-import { filterProjects, uniqueValues, type ProjectFilters } from '../utils/projects';
+import { filterProjects, projectLinks, uniqueValues, type ProjectFilters } from '../utils/projects';
 
 interface FilterRowProps {
   label: string;
@@ -20,6 +20,27 @@ function FilterRow({ label, options, value, onChange }: FilterRowProps) {
         <button key={o} type="button" className="chip" aria-pressed={value === o} onClick={() => onChange(o)}>
           {o}
         </button>
+      ))}
+    </div>
+  );
+}
+
+function ProjectLinks({ project }: { project: Project }) {
+  const links = projectLinks(project);
+  if (links.length === 0) return null;
+  return (
+    <div className="project__links">
+      {links.map((l) => (
+        <a
+          key={l.url}
+          className="btn btn--ghost"
+          href={l.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`${l.label} for ${project.name} (opens in a new tab)`}
+        >
+          {l.label}
+        </a>
       ))}
     </div>
   );
@@ -70,6 +91,7 @@ export function Projects({ projects }: { projects: Project[] }) {
                   {p.role}{p.teamSize ? ` · ${p.teamSize}` : ''}
                 </p>
                 <TagList items={p.stack} label="Tech stack" />
+                <ProjectLinks project={p} />
               </article>
             ))}
           </div>
