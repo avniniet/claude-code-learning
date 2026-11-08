@@ -117,6 +117,8 @@ ul { margin: 0; padding: 0; }
 .project__impact span { color: var(--color-text-muted); font-size: 0.82rem; }
 .project__meta { font-size: 0.88rem; color: var(--color-text-muted); }
 .project .tags { margin-top: auto; }
+.project__links { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.project__links .btn { padding: 6px 14px; font-size: 0.88rem; }
 .empty { color: var(--color-text-muted); padding: var(--space-6) 0; }
 
 /* Clients */

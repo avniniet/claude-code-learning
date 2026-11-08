@@ -1,4 +1,4 @@
-import { filterProjects, formatYearMonth, summarizeClients, uniqueValues } from '../utils/projects';
+import { filterProjects, formatYearMonth, isSafeExternalUrl, projectLinks, summarizeClients, uniqueValues } from '../utils/projects';
 import { fixtures } from './fixtures';
 
 const projects = fixtures['/data/projects.json'];
@@ -33,5 +33,23 @@ describe('helpers', () => {
   it('formatYearMonth', () => {
     expect(formatYearMonth('2021-03')).toBe('Mar 2021');
     expect(formatYearMonth(null)).toBe('Present');
+  });
+});
+
+describe('projectLinks', () => {
+  it('returns nothing when no links are set', () => {
+    expect(projectLinks({})).toEqual([]);
+  });
+  it('returns code then demo links', () => {
+    expect(projectLinks({ demoUrl: 'https://demo.example.com', repoUrl: 'https://github.com/example/repo' })).toEqual([
+      { label: 'Code', url: 'https://github.com/example/repo' },
+      { label: 'Live demo', url: 'https://demo.example.com' },
+    ]);
+  });
+  it('skips unsafe or malformed URLs', () => {
+    expect(projectLinks({ repoUrl: 'javascript:alert(1)', demoUrl: 'not a url' })).toEqual([]);
+    expect(isSafeExternalUrl('http://example.com')).toBe(true);
+    expect(isSafeExternalUrl('mailto:someone@example.com')).toBe(false);
+    expect(isSafeExternalUrl('')).toBe(false);
   });
 });

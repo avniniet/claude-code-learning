@@ -41,3 +41,27 @@ export function formatYearMonth(value: string | null): string {
   const [year, month] = value.split('-');
   return `${MONTHS[Number(month) - 1] ?? ''} ${year}`.trim();
 }
+
+export interface ProjectLink {
+  label: 'Code' | 'Live demo';
+  url: string;
+}
+
+/** Only absolute http(s) URLs are rendered, so a typo or `javascript:` value in the data never becomes a link. */
+export function isSafeExternalUrl(value: string | undefined): value is string {
+  if (!value) return false;
+  try {
+    const { protocol } = new URL(value);
+    return protocol === 'https:' || protocol === 'http:';
+  } catch {
+    return false;
+  }
+}
+
+/** The optional repo/demo links of a project, in display order, skipping missing or unsafe URLs. */
+export function projectLinks(project: Pick<Project, 'repoUrl' | 'demoUrl'>): ProjectLink[] {
+  const links: ProjectLink[] = [];
+  if (isSafeExternalUrl(project.repoUrl)) links.push({ label: 'Code', url: project.repoUrl });
+  if (isSafeExternalUrl(project.demoUrl)) links.push({ label: 'Live demo', url: project.demoUrl });
+  return links;
+}
