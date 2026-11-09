@@ -53,6 +53,7 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done · `[!]` blocked
 - [x] T8.2 Container serves site, data, deep links, `/healthz`
 - [!] T8.3 Public URL via ngrok — blocked: owner must add `NGROK_AUTHTOKEN` to `.env`, then `docker compose up -d`
 - [x] T8.4 GitHub Actions CI: lint + test + build on every PR, plus Docker image build (`.github/workflows/ci.yml`, ADR 0007)
+- [x] T8.6 MIT `LICENSE` for code; `frontend/public/data/` content excluded (ADR 0008)
 
 ## Backlog / future
 - [ ] Add LinkedIn-only details (certifications, recommendations) to data files
