@@ -14,6 +14,7 @@ Architecture Decision Record. Read this index first when resuming work: it is th
 | [0005](0005-ngrok-compose-service.md) | ngrok as a Docker Compose service | Accepted | 2026-10-26 |
 | [0006](0006-styling-approach.md) | Plain CSS with design tokens, light/dark theme | Accepted | 2026-10-26 |
 | [0007](0007-github-actions-ci.md) | GitHub Actions CI on every PR | Accepted | 2026-10-29 |
+| [0008](0008-license.md) | MIT license for code; personal content excluded | Accepted | 2026-11-09 |
 
 ## Adding a decision
 

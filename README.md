@@ -49,6 +49,12 @@ See [decisions/0002](decisions/0002-data-layer-backend-ready.md). In short:
 2. Uncomment the `backend` service in `docker-compose.yml` and the `/api/` block in `docker/nginx.conf`.
 3. Set `VITE_DATA_SOURCE=api` in `.env` and rebuild. No component changes are needed.
 
+## License
+
+The code is released under the [MIT License](LICENSE) (see [decisions/0008](decisions/0008-license.md)).
+
+The personal content in `frontend/public/data/` (profile, skills, experience and projects) is **not** covered by the MIT License: all rights reserved. If you reuse this project as a template, replace those files with your own content.
+
 ## Layout
 
 ```
