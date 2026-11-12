@@ -26,6 +26,12 @@ export interface Profile {
   /** Optional public contact details; the UI hides them when absent (see decisions/0003). */
   email?: string;
   phone?: string;
+  /**
+   * Optional link to a downloadable resume (e.g. a PDF). Either a same-origin path such as
+   * "/resume.pdf" (file placed in `public/`) or an absolute http(s) URL. The hero shows a
+   * "Download resume" button only when this is set to a valid value.
+   */
+  resumeUrl?: string;
 }
 
 export interface SkillCategory {

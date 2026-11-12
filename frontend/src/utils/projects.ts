@@ -41,3 +41,26 @@ export function formatYearMonth(value: string | null): string {
   const [year, month] = value.split('-');
   return `${MONTHS[Number(month) - 1] ?? ''} ${year}`.trim();
 }
+
+export interface ResumeLink {
+  href: string;
+  /** True for same-origin paths, where the browser's `download` attribute applies. */
+  sameOrigin: boolean;
+}
+
+/**
+ * Validates `Profile.resumeUrl`. Accepts a same-origin absolute path ("/resume.pdf") or an
+ * absolute http(s) URL; anything else (missing, relative, protocol-relative, `javascript:`)
+ * returns null so a bad value in the data never becomes a link.
+ */
+export function resumeLink(value: string | undefined): ResumeLink | null {
+  const href = value?.trim();
+  if (!href) return null;
+  if (href.startsWith('/') && !href.startsWith('//')) return { href, sameOrigin: true };
+  try {
+    const url = new URL(href);
+    return url.protocol === 'http:' || url.protocol === 'https:' ? { href, sameOrigin: false } : null;
+  } catch {
+    return null;
+  }
+}

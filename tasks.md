@@ -35,6 +35,7 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done · `[!]` blocked
 - [x] T5.2 Shared components (Navbar, SectionHeader, Tag, Loader, ErrorState)
 - [x] T5.3 Sections: Hero, About, Skills, Experience, Projects (filters), Clients, Contact
 - [x] T5.4 Responsive + accessibility pass
+- [x] T5.6 Optional `profile.resumeUrl` → "Download resume" button in the hero (hidden until a resume is published)
 
 ## Phase 6 — Tests
 - [x] T6.1 Service factory test
@@ -57,7 +58,8 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done · `[!]` blocked
 ## Backlog / future
 - [ ] Add LinkedIn-only details (certifications, recommendations) to data files
 - [ ] Implement backend and switch `VITE_DATA_SOURCE=api`
-- [ ] Optional: downloadable resume PDF, contact form (needs backend)
+- [ ] Optional: contact form (needs backend)
+- [ ] Publish a resume PDF and set `resumeUrl` in `profile.json` (owner; UI support done in T5.6)
 - [ ] Mobile navigation menu (nav links are hidden below 860px; currently only the theme toggle shows)
 
 ## Change log

@@ -1,4 +1,4 @@
-import { filterProjects, formatYearMonth, summarizeClients, uniqueValues } from '../utils/projects';
+import { filterProjects, formatYearMonth, resumeLink, summarizeClients, uniqueValues } from '../utils/projects';
 import { fixtures } from './fixtures';
 
 const projects = fixtures['/data/projects.json'];
@@ -33,5 +33,23 @@ describe('helpers', () => {
   it('formatYearMonth', () => {
     expect(formatYearMonth('2021-03')).toBe('Mar 2021');
     expect(formatYearMonth(null)).toBe('Present');
+  });
+});
+
+describe('resumeLink', () => {
+  it('returns null when missing or blank', () => {
+    expect(resumeLink(undefined)).toBeNull();
+    expect(resumeLink('   ')).toBeNull();
+  });
+  it('accepts same-origin paths', () => {
+    expect(resumeLink('/resume.pdf')).toEqual({ href: '/resume.pdf', sameOrigin: true });
+  });
+  it('accepts absolute http(s) URLs', () => {
+    expect(resumeLink('https://example.com/cv.pdf')).toEqual({ href: 'https://example.com/cv.pdf', sameOrigin: false });
+  });
+  it('rejects unsafe or malformed values', () => {
+    for (const bad of ['javascript:alert(1)', '//evil.example/cv.pdf', 'resume.pdf', 'ftp://example.com/cv.pdf']) {
+      expect(resumeLink(bad)).toBeNull();
+    }
   });
 });
