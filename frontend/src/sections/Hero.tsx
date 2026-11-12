@@ -1,7 +1,9 @@
 import type { Profile } from '../types/portfolio';
+import { resumeLink } from '../utils/projects';
 
 export function Hero({ profile }: { profile: Profile }) {
   const linkedIn = profile.links.find((l) => l.label === 'LinkedIn');
+  const resume = resumeLink(profile.resumeUrl);
   return (
     <section className="hero" aria-labelledby="hero-name">
       <div className="container">
@@ -17,6 +19,22 @@ export function Hero({ profile }: { profile: Profile }) {
               Connect on LinkedIn
             </a>
           )}
+          {resume &&
+            (resume.sameOrigin ? (
+              <a className="btn btn--ghost" href={resume.href} download>
+                Download resume
+              </a>
+            ) : (
+              <a
+                className="btn btn--ghost"
+                href={resume.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Download resume (opens in a new tab)"
+              >
+                Download resume
+              </a>
+            ))}
         </div>
       </div>
     </section>
