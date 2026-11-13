@@ -21,6 +21,7 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done · `[!]` blocked
 - [x] T3.3 `public/data/skills.json` (technical + functional)
 - [x] T3.4 `public/data/experience.json` (6 roles)
 - [x] T3.5 `public/data/projects.json` (6 projects, type/domain/client)
+- [x] T3.8 Optional `Profile.certifications` schema + About-section list (hidden until data is added; issue #1)
 
 ## Phase 4 — Service layer (backend-ready)
 - [x] T4.1 `httpClient.ts` (base URL, timeout, typed errors)
@@ -55,7 +56,7 @@ Legend: `[ ]` todo · `[~]` in progress · `[x]` done · `[!]` blocked
 - [x] T8.4 GitHub Actions CI: lint + test + build on every PR, plus Docker image build (`.github/workflows/ci.yml`, ADR 0007)
 
 ## Backlog / future
-- [ ] Add LinkedIn-only details (certifications, recommendations) to data files
+- [ ] Add LinkedIn-only details to data files: certifications (schema/UI ready, T3.8; owner to add entries to `profile.json`), recommendations
 - [ ] Implement backend and switch `VITE_DATA_SOURCE=api`
 - [ ] Optional: downloadable resume PDF, contact form (needs backend)
 - [ ] Mobile navigation menu (nav links are hidden below 860px; currently only the theme toggle shows)

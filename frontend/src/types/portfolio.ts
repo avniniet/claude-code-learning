@@ -13,6 +13,16 @@ export interface Stat {
   label: string;
 }
 
+/** A professional certification, e.g. as listed on LinkedIn. */
+export interface Certification {
+  name: string;
+  issuer: string;
+  /** ISO year-month the certification was issued, e.g. "2024-06" */
+  issued?: string;
+  /** Public verification link (absolute http/https URL) */
+  url?: string;
+}
+
 export interface Profile {
   name: string;
   title: string;
@@ -26,6 +36,8 @@ export interface Profile {
   /** Optional public contact details; the UI hides them when absent (see decisions/0003). */
   email?: string;
   phone?: string;
+  /** Optional certifications; the About section lists them only when present. */
+  certifications?: Certification[];
 }
 
 export interface SkillCategory {
