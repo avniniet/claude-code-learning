@@ -34,12 +34,14 @@ All content lives in `frontend/public/data/`:
 
 | File | Contents |
 |------|----------|
-| `profile.json` | name, title, summary, stats, links |
+| `profile.json` | name, title, summary, stats, links, optional `certifications` |
 | `skills.json` | technical + functional skill groups |
 | `experience.json` | roles / employers / clients timeline |
 | `projects.json` | projects with type, domain, client, impact |
 
 The shapes are defined in `frontend/src/types/portfolio.ts`. Data is baked into the image, so run `docker compose up --build -d` after editing. nginx serves `/data/` with `no-cache`, so visitors get the new content straight away.
+
+To show certifications in the About section, add an optional `certifications` array to `profile.json`. Each entry has a required `name` and `issuer`, plus an optional `issued` (`YYYY-MM`) and `url` (an absolute `https://` verification link). The section stays hidden while the array is missing or empty.
 
 ## Adding a backend later
 
