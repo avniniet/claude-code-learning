@@ -26,6 +26,25 @@ export interface Profile {
   /** Optional public contact details; the UI hides them when absent (see decisions/0003). */
   email?: string;
   phone?: string;
+  /**
+   * Optional recommendations (e.g. copied from LinkedIn, with the recommender's consent).
+   * The Recommendations section is hidden when this is absent or has no valid entries.
+   */
+  recommendations?: Recommendation[];
+}
+
+/** A recommendation quote from a colleague or client. */
+export interface Recommendation {
+  /** The recommendation text, shown verbatim. */
+  quote: string;
+  /** Name of the person who wrote it. */
+  author: string;
+  /** Their title and company, e.g. "Director of Engineering, Example Corp". */
+  authorTitle?: string;
+  /** How they worked together, e.g. "Managed me directly". */
+  relationship?: string;
+  /** ISO year-month the recommendation was given, e.g. "2025-03". */
+  date?: string;
 }
 
 export interface SkillCategory {
