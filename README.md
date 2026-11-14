@@ -41,6 +41,24 @@ All content lives in `frontend/public/data/`:
 
 The shapes are defined in `frontend/src/types/portfolio.ts`. Data is baked into the image, so run `docker compose up --build -d` after editing. nginx serves `/data/` with `no-cache`, so visitors get the new content straight away.
 
+### Recommendations (optional)
+
+`profile.json` accepts an optional `recommendations` array. When it has at least one entry with a non-empty `quote` and `author`, a "Recommendations" section appears before Contact; otherwise the section is hidden. Only publish a recommendation with the recommender's consent.
+
+```json
+"recommendations": [
+  {
+    "quote": "The recommendation text, verbatim.",
+    "author": "Recommender's name",
+    "authorTitle": "Their title, Company",
+    "relationship": "How you worked together",
+    "date": "2025-03"
+  }
+]
+```
+
+`authorTitle`, `relationship` and `date` (`YYYY-MM`) are optional. Entries are shown in the order they appear in the file.
+
 ## Adding a backend later
 
 See [decisions/0002](decisions/0002-data-layer-backend-ready.md). In short:

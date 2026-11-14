@@ -1,6 +1,6 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import App from '../App';
-import { mockFetch } from './fixtures';
+import { fixtures, mockFetch } from './fixtures';
 
 beforeAll(() => {
   window.matchMedia ??= ((query: string) => ({ matches: false, media: query, addEventListener() {}, removeEventListener() {} })) as unknown as typeof window.matchMedia;
@@ -33,5 +33,31 @@ describe('App', () => {
     render(<App />);
     expect(await screen.findByRole('alert')).toHaveTextContent('Couldn’t load the portfolio');
     expect(screen.getByRole('button', { name: 'Try again' })).toBeInTheDocument();
+  });
+
+  it('hides the recommendations section when the profile has none', async () => {
+    vi.stubGlobal('fetch', mockFetch());
+    render(<App />);
+    await screen.findByRole('heading', { level: 1, name: 'Avnish Kumar Mishra' });
+    expect(screen.queryByRole('heading', { name: 'What colleagues say' })).not.toBeInTheDocument();
+  });
+
+  it('shows valid recommendations from the profile', async () => {
+    const profile = {
+      ...fixtures['/data/profile.json'],
+      recommendations: [
+        { quote: 'A calm, reliable lead.', author: 'Test Person', authorTitle: 'Test Title', date: '2025-03' },
+        { quote: '', author: 'Blank Quote' },
+      ],
+    };
+    vi.stubGlobal('fetch', mockFetch({ ...fixtures, '/data/profile.json': profile }));
+    render(<App />);
+    const heading = await screen.findByRole('heading', { name: 'What colleagues say' });
+    const section = heading.closest('section')!;
+    expect(section).toHaveTextContent('A calm, reliable lead.');
+    expect(section).toHaveTextContent('Test Person');
+    expect(section).toHaveTextContent('Test Title · Mar 2025');
+    expect(section).not.toHaveTextContent('Blank Quote');
+    expect(section.querySelectorAll('blockquote')).toHaveLength(1);
   });
 });

@@ -125,6 +125,14 @@ ul { margin: 0; padding: 0; }
 .client__domain { color: var(--color-text-muted); font-size: 0.9rem; margin-top: var(--space-1); }
 .client__meta { display: flex; justify-content: space-between; margin-top: var(--space-4); font-size: 0.85rem; color: var(--color-text-muted); }
 
+/* Recommendations */
+.recommendations-grid { display: grid; gap: var(--space-5); grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); list-style: none; }
+.recommendation { display: flex; flex-direction: column; gap: var(--space-4); height: 100%; }
+.recommendation__quote { border-left: 3px solid var(--color-accent); padding-left: var(--space-4); font-size: 0.95rem; white-space: pre-line; }
+.recommendation figcaption { margin-top: auto; display: flex; flex-direction: column; gap: var(--space-1); }
+.recommendation__author { font-weight: 600; }
+.recommendation__meta { color: var(--color-text-muted); font-size: 0.85rem; }
+
 /* Contact */
 .contact { text-align: center; }
 .contact .section-header { margin-left: auto; margin-right: auto; }

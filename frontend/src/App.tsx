@@ -7,6 +7,7 @@ import { Contact } from './sections/Contact';
 import { ExperienceTimeline } from './sections/ExperienceTimeline';
 import { Hero } from './sections/Hero';
 import { Projects } from './sections/Projects';
+import { Recommendations } from './sections/Recommendations';
 import { Skills } from './sections/Skills';
 
 export default function App() {
@@ -28,6 +29,7 @@ export default function App() {
         <ExperienceTimeline experience={experience} />
         <Projects projects={projects} />
         <Clients experience={experience} projects={projects} />
+        <Recommendations recommendations={profile.recommendations} />
         <Contact profile={profile} />
       </main>
       <footer className="footer">
